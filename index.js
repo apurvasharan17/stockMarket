@@ -227,7 +227,7 @@ function filterByIndustry(stock,industry){
   })
 
   app.get('/stocks',(req,res)=>{
-    res.json({stock:stocks})
+    res.json({stocks:stocks})
   })
 
 
