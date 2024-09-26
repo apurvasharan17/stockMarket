@@ -213,7 +213,7 @@ return stock.exchange.toLowerCase()==exchange
 app.get('/stocks/filter/exchange',(req,res)=>{
  let exchange=req.query.exchange;
  let stockCopy=stocks.filter(stock=>filterByExchange(stock,exchange))
- res.json({stock:stockCopy})
+ res.json({stocks:stockCopy})
 })
 
 function filterByIndustry(stock,industry){
@@ -223,11 +223,11 @@ function filterByIndustry(stock,industry){
   app.get('/stocks/filter/industry',(req,res)=>{
    let industry=req.query.industry;
    let stockCopy=stocks.filter(stock=>filterByIndustry(stock,industry))
-   res.json({stock:stockCopy})
+   res.json({stocks:stockCopy})
   })
 
   app.get('/stocks',(req,res)=>{
-    res.json({stock:stocks})
+    res.json({stocks:stocks})
   })
 
 
